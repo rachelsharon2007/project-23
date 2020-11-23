@@ -42,16 +42,16 @@ function setup() {
 	boxLeftBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} );
  	World.add(world, boxLeftBody);
 
-	box2Sprite =createSprite (boxPosition, boxY,20,100);
+	box2Sprite =createSprite (boxPosition+200, boxY,20,100);
 	box2Sprite.shapeColor = ("red");
 	
-	boxRightBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} );
+	boxRightBody = Bodies.rectangle(boxPosition+200-20, boxY, 20,100 , {isStatic:true} );
  	World.add(world, boxRightBody);
 
 	engine = Engine.create();
 	world = engine.world;
 
-	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:3, isStatic:true});
+	packageBody = Bodies.circle(width/2 , 200 , 5 , {restitution:0.4, isStatic:true});
 	World.add(world, packageBody);
 	
 
